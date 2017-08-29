@@ -1,0 +1,13 @@
+{
+  "sequelize": {
+    "client": "postgres",
+    "connection": {}
+  },
+
+  "redis": {},
+
+  "passport": {
+    "google": {},
+    "facebook": {}
+  }
+}
