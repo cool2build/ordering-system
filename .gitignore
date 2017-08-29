@@ -1,5 +1,12 @@
-/node_modules
-/.idea
-.DS_Store
-bundle.js
-npm-debug.log
+# node modules
+node_modules
+
+# db files
+db/data
+
+# config
+config/development.json
+config/production.json
+
+# dist
+public/dist
