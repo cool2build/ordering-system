@@ -1,27 +1,16 @@
 {
   "sequelize": {
     "client": "postgres",
-    "connection": {
-      "database": "database_name",
-      "host": "localhost",
-      "username": "",
-      "password": ""
-    }
+    "database": "no-line",
+    "host": "localhost",
+    "user": "",
+    "password": "",
+    "port": 5432,
+    "pool": {}
   },
 
   "redis": {
     "port": "6379",
     "host": "localhost"
-  },
-
-  "passport": {
-    "google": {
-      "clientID": "insert_here",
-      "clientSecret": "insert_here"
-    },
-    "facebook": {
-      "clientID": "insert_here",
-      "clientSecret": "insert_here"
-    }
   }
 }

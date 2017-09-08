@@ -1,11 +1,8 @@
-const express = require('express');
-const app = express();
-const path = require('path');
-const port = process.env.PORT || 3000;
+const app = require('express')();
+const server = require('http').Server(app);
+const io = require('socket.io')(server);
+const db = require('../database'); 
+const port = process.env.PORT || 8080;
 
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
 
-app.use(express.static(path.join(__dirname, '../public')));
-
-app.listen(port, () => console.log(`listening on port ${port}`));
+server.listen(port, () => console.log(`listening on port ${port}`));
