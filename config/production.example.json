@@ -10,7 +10,15 @@
   },
 
   "redis": {
-    "port": "6379",
-    "host": "localhost"
+    "port": "FILL_ME_IN",
+    "host": "FILL_ME_IN"
+  },
+
+  "socket": {
+    "origins": "FILL_ME_IN"
+  },
+
+  "stripe": {
+    "Secret_key": "FILL_ME_IN"
   }
 }

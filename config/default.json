@@ -9,5 +9,9 @@
     "pool": {}
   },
 
-  "redis": {}
+  "redis": {},
+
+  "socket": {},
+
+  "stripe": {}
 }
