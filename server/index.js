@@ -1,11 +1,17 @@
-const express = require('express');
-const app = express();
-const path = require('path');
-const port = process.env.PORT || 3000;
+const app = require('express')();
+const server = require('http').Server(app);
+const io = require('socket.io')(server);
+const middleware = require('./middleware');
+const config = require('config');
+const db = require('../database'); 
+const port = process.env.PORT || 8080;
 
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+// server
+app.use(middleware.bodyParser.json());
+app.use(middleware.bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static(path.join(__dirname, '../public')));
+// socket.io
+io.set('origins', config.socket.origins);
+io.on('connection', middleware.socket);
 
-app.listen(port, () => console.log(`listening on port ${port}`));
+server.listen(port, () => console.log(`Ready to accept connections on port ${port}`));
